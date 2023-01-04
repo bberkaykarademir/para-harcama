@@ -1,13 +1,95 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(213, 211, 213);
+}
+
+h1 {
+  text-align: center;
+}
+
+.itemcontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  background-color: rgb(255, 255, 255);
+  padding: 11px;
+  margin: 33px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  display: block;
+}
+
+.price {
+  color: rgb(53, 160, 29);
+  font-weight: bolder;
+  font-size: 1.1em;
+  margin: 9px 0px 11px 0px;
+}
+
+.amountsec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.amountsec p{
+  padding: 6px 33px;
+  border: 1px solid gray;
+}
+
+.amountsec button {
+  width: 66px;
+  height: 33px;
+  border: none;
+}
+
+.sat {
+  background-color: red;
+}
+
+.al {
+  background-color: rgb(106, 204, 241);
+}
+
+.basket{
+  text-align: center;
+}
+
+.temizle{
+  margin: auto;
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .itemcontainer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .itemcontainer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .itemcontainer {
+    display: block;
+
+  }
 }
